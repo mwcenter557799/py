@@ -15,7 +15,7 @@ st.markdown(
 st.markdown("---")
 
 
-# Fungsi untuk mengambil daftar surat dari API
+# Fungsi untuk mengambil daftar surat dari API (URL DIPERBAIKI)
 @st.cache_data
 def get_daftar_surat():
   url = "https://equran.id/api/v2/surat"
@@ -25,7 +25,7 @@ def get_daftar_surat():
   return []
 
 
-# Fungsi untuk mengambil detail surat dan ayat
+# Fungsi untuk mengambil detail surat dan ayat (URL DIPERBAIKI)
 def get_detail_surat(nomor):
   url = f"https://equran.id/api/v2/surat/{nomor}"
   response = requests.get(url)
@@ -98,4 +98,3 @@ if daftar_surat:
       st.markdown("---")
 else:
   st.error("Gagal memuat data dari server. Periksa koneksi internet Anda.")
-  
